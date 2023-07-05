@@ -24,10 +24,9 @@ class Solution {
                         stack.add(s);
                     }
                 }
-                if (squarePattern.matcher(s).matches()) {
+                else if (squarePattern.matcher(s).matches()) {
                     switch (s) {
                         case "S" :
-                            stack.add(String.valueOf((int)Math.pow(Integer.parseInt(stack.pop()), 1)));
                             break;
                         case "D" :
                             stack.add(String.valueOf((int)Math.pow(Integer.parseInt(stack.pop()), 2)));
@@ -39,7 +38,7 @@ class Solution {
                             break;
                     }
                 }
-                if (startOrAchaPattern.matcher(s).matches()) {
+                else if (startOrAchaPattern.matcher(s).matches()) {
                     switch (s) {
                         case "*":
                             String currentValue = stack.pop();
