@@ -22,8 +22,7 @@ class Solution {
                     } else {
                         stack.add(Integer.parseInt(s));
                     }
-                }
-                if (squarePattern.matcher(s).matches()) {
+                }else if (squarePattern.matcher(s).matches()) {
                     switch (s) {
                         case "S" :
                             break;
@@ -36,8 +35,7 @@ class Solution {
                         default:
                             break;
                     }
-                }
-                if (startOrAchaPattern.matcher(s).matches()) {
+                }else if (startOrAchaPattern.matcher(s).matches()) {
                     switch (s) {
                         case "*":
                             int currentValue = stack.pop();
